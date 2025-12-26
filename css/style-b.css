@@ -255,3 +255,8 @@ body {
     }
 }
 
+/* MENÚ ACTIVO EN MÓVIL */
+.menu.active {
+    display: flex;
+}
+
