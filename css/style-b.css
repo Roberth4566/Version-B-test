@@ -1,4 +1,4 @@
-/* RESET GLOBAL */
+/* ================= RESET GLOBAL ================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,62 +9,75 @@
 body {
     background: #f3f4f6;
     color: #111827;
+    line-height: 1.4;
 }
 
 /* ================= HEADER ================= */
-header {
+.header {
     width: 100%;
     background: linear-gradient(135deg, #4da3ff, #9b5de5);
-    padding: 18px 40px;
+    padding: 16px 24px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 }
 
-nav {
+.nav {
     max-width: 1400px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-nav h1 {
+.logo {
     color: #ffffff;
     font-size: 26px;
+    font-weight: 700;
 }
 
-nav ul {
+/* ================= MENÚ ================= */
+.menu {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 28px;
 }
 
-nav ul li {
-    cursor: pointer;
-    font-weight: 500;
+.menu li {
     color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
 }
 
-nav ul li:hover {
+.menu li:hover {
     color: #e0e7ff;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* ================= CONTENEDOR ================= */
 .main-container {
     max-width: 1400px;
     margin: auto;
+    padding: 28px;
     display: grid;
     grid-template-columns: 3fr 1.2fr;
-    gap: 25px;
-    padding: 30px;
+    gap: 26px;
 }
 
 /* ================= BIENVENIDA ================= */
 .welcome {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .welcome h2 {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 800;
     background: linear-gradient(135deg, #4da3ff, #9b5de5);
     -webkit-background-clip: text;
@@ -78,38 +91,35 @@ nav ul li:hover {
     gap: 22px;
 }
 
-/* TARJETA CURSO */
 .course-card {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 24px;
-    border-radius: 18px;
+    padding: 26px;
+    border-radius: 20px;
     color: #ffffff;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.28);
 }
 
-/* COLORES POR MATERIA */
+/* COLORES */
 .course-card:has(.matematica) { background: #4da3ff; }
 .course-card:has(.historia)   { background: #6cc04a; }
 .course-card:has(.quimica)    { background: #ff9f1c; }
 .course-card:has(.ingles)     { background: #9b5de5; }
 
-/* ICONO */
 .course-icon {
-    font-size: 34px;
-    padding: 18px;
-    border-radius: 14px;
+    font-size: 36px;
+    padding: 20px;
+    border-radius: 16px;
     background: rgba(255,255,255,0.25);
 }
 
-/* INFO */
 .course-info h3 {
     font-size: 20px;
     margin-bottom: 6px;
@@ -118,24 +128,24 @@ nav ul li:hover {
 .course-info p {
     font-size: 15px;
     margin-bottom: 14px;
-    color: rgba(255,255,255,0.9);
+    opacity: 0.9;
 }
 
 /* BOTÓN */
 .btn {
-    padding: 10px 24px;
+    padding: 12px 26px;
+    border-radius: 12px;
     border: none;
-    border-radius: 10px;
     background: #ffffff;
     color: #111827;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .btn:hover {
     background: #f3f4f6;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 /* ================= PANEL LATERAL ================= */
@@ -148,19 +158,19 @@ nav ul li:hover {
 .panel-box {
     background: #ffffff;
     padding: 22px;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.08);
 }
 
 .panel-box h3,
 .panel-box h4 {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 /* TAREAS */
 .task {
     padding: 14px;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #f9fafb;
     margin-bottom: 12px;
     transition: transform 0.2s ease;
@@ -183,13 +193,12 @@ nav ul li:hover {
     background: #e5e7eb;
     border-radius: 8px;
     font-size: 14px;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .calendar-grid div:hover {
     background: #4da3ff;
     color: #ffffff;
-    transform: scale(1.1);
+    transform: scale(1.08);
     cursor: pointer;
 }
 
@@ -207,22 +216,33 @@ nav ul li:hover {
 }
 
 /* MÓVIL */
-@media (max-width: 600px) {
-    header {
-        padding: 16px 20px;
-    }
+@media (max-width: 768px) {
 
-    nav {
+    .menu {
+        display: none;
         flex-direction: column;
-        gap: 12px;
+        background: #4da3ff;
+        width: 100%;
+        margin-top: 14px;
+        border-radius: 14px;
+        padding: 14px 0;
     }
 
-    nav ul {
-        gap: 15px;
+    .menu li {
+        padding: 14px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        flex-wrap: wrap;
     }
 
     .welcome h2 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .course-card {
@@ -234,3 +254,4 @@ nav ul li:hover {
         width: 100%;
     }
 }
+
